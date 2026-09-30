@@ -23,14 +23,17 @@
 #include <iomanip>
 #include <cmath>
 using namespace std;
+const int LARGECOLUMN = 30;
+const int SMALLCOLUMN = 10;
+
+int main() {
+    
 char continueOrExit;
 int analyzeNumber;
 int choice;
-const int LARGECOLUMN = 30;
-const int SMALLCOLUMN = 10;
 int i = 1;
 int j = 1;
-int main() {
+    
     do{
         
         //display for user welcome message
@@ -63,8 +66,8 @@ int main() {
         
         cout << setfill('-') << setw(LARGECOLUMN + 11) << "|\n";
         cout << left << "1:All Factors of number" << setfill(' ') << setw(SMALLCOLUMN + 8) << right << "|\n";
-        cout << left << "2:All Prim Factors of number" << setw(SMALLCOLUMN + 3) << right << "|\n";
-        cout << left << "3:Numbered squared and its square root" << setw(SMALLCOLUMN -7) << right << "|\n";
+        cout << left << "2:All Prime Factors of number" << setw(SMALLCOLUMN + 2) << right << "|\n";
+        cout << left << "3:Number squared and its square root" << setw(SMALLCOLUMN -5) << right << "|\n";
         cout << setfill('-') << setw(LARGECOLUMN + 13) << "|\n\n\n";
         
         //Getting user input for what option they want to pick
@@ -84,8 +87,7 @@ int main() {
                 // all factors of the number
             case 1:
                 
-                //amount of collumns(rows) for(outer loop) will print of factors number
-            //   for( i = 1; i <= analyzeNumber; i++){
+                
                     //for each iteration of our number factored in each column
                     for( j = 1; j <= analyzeNumber; j++) {
                         
